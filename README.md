@@ -392,13 +392,13 @@ This is a variant of what's known as a [Procrustes problem](https://en.wikipedia
 This energy is _quadratic_ in $\mathbf{t}$ and there are no other constraints on
 $\mathbf{t}$. We can immediately solve for the optimal $\mathbf{t}^*$ — leaving $\mathbf{R}$ as an unknown — by
 setting all derivatives with respect to unknowns in $\mathbf{t}$ to zero:
-
+$$
 \begin{align*}
 \mathbf{t}^*
 &= \mathop{\text{argmin}}_{\mathbf{t}} \sum_{i=1}^k \| \mathbf{R} \mathbf{x}_i + \mathbf{t} - \mathbf{p}_i\| ^{2}  \\
 &= \mathop{\text{argmin}}_\mathbf{t} \left\|\mathbf{R} \mathbf{X}^{\top} + \mathbf{t} \mathbf{1}^{\top} - \mathbf{P}^{\top}\right\|^2_F,
 \end{align*}
-
+$$
 where $\mathbf{1} \in  \mathbb{R}^{k}$ is a vector ones and $\|\mathbf{X}\|_F^2$ computes the squared [Frobenius norm](https://en.wikipedia.org/wiki/Matrix_norm#Frobenius_norm) of the matrix $\mathbf{X}$ (i.e., the sum of all squared element values. In MATLAB syntax: `sum(sum(A.^2))`).  Setting the partial derivative with respect to $\mathbf{t}$ of this quadratic energy to zero finds the minimum:
 
 \begin{align*}
