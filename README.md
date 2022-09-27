@@ -482,8 +482,8 @@ $$
 $$
 \begin{align*}
 \mathbf{R}^* 
-&= \mathop{\text{argmax}}_{\mathbf{R} \in  SO(3)} \left<\mathbf{R},\overline{\mathbf{P}}^{\top}\,\overline{\mathbf{X}}\right>_F\\
-&= \mathop{\text{argmax}}_{\mathbf{R} \in  SO(3)} \left<\mathbf{R},\mathbf{M}\right>_F
+&= \mathop{\text{argmax}}\_{\mathbf{R} \in  SO(3)} \left<\mathbf{R},\overline{\mathbf{P}}^{\top}\,\overline{\mathbf{X}}\right>\_F\\
+&= \mathop{\text{argmax}}\_{\mathbf{R} \in  SO(3)} \left<\mathbf{R},\mathbf{M}\right>\_F
 \end{align*}
 $$
 
