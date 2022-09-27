@@ -401,12 +401,12 @@ $$
 \end{align*}
 $$
 
-where $\mathbf{1} \in  \mathbb{R}^{k}$ is a vector ones and $\|\mathbf{X}\|_F^2$ computes the squared [Frobenius norm](https://en.wikipedia.org/wiki/Matrix_norm#Frobenius_norm) of the matrix $\mathbf{X}$ (i.e., the sum of all squared element values. In MATLAB syntax: `sum(sum(A.^2))`).  Setting the partial derivative with respect to $\mathbf{t}$ of this quadratic energy to zero finds the minimum:
+where $\mathbf{1} \in  \mathbb{R}^{k}$ is a vector ones and $||\mathbf{X}||_F^2$ computes the squared [Frobenius norm](https://en.wikipedia.org/wiki/Matrix_norm#Frobenius_norm) of the matrix $\mathbf{X}$ (i.e., the sum of all squared element values. In MATLAB syntax: `sum(sum(A.^2))`).  Setting the partial derivative with respect to $\mathbf{t}$ of this quadratic energy to zero finds the minimum:
 
 $$
 \begin{align*}
 0 
-&= \frac{\partial }{\partial \mathbf{t}} \left\|\mathbf{R} \mathbf{X}^{\top} + \mathbf{t} \mathbf{1}^{\top} - \mathbf{P}^{\top}\right\|^2_F \\
+&= \frac{\partial }{\partial \mathbf{t}} \left||\mathbf{R} \mathbf{X}^{\top} + \mathbf{t} \mathbf{1}^{\top} - \mathbf{P}^{\top}\right||^2_F \\
 &= \mathbf{1}^{\top} \mathbf{1} \mathbf{t} + \mathbf{R} \mathbf{X}^{\top} \mathbf{1} - \mathbf{P}^{\top} \mathbf{1},
 \end{align*}
 $$
@@ -434,12 +434,14 @@ unknown rotation $\mathbf{R}$. Let us
 for all occurrences of $\mathbf{t}$ in our energy written in its original summation
 form:
 
+$$
 \begin{align*}
-\mathop{\text{minimize}}_{\mathbf{R} \in  SO(3)}  \sum\limits_{i=1}^k \left\| \mathbf{R} \mathbf{x}_i + ( \overline{\mathbf{p}} - \mathbf{R}\overline{\mathbf{x}}) - \mathbf{p}_i \right\|^2 \\
-\mathop{\text{minimize}}_{\mathbf{R} \in  SO(3)}  \sum\limits_{i=1}^k \left\| \mathbf{R} (\mathbf{x}_i - \overline{\mathbf{x}}) - (\mathbf{p}_i - \overline{\mathbf{p}}) \right\|^2 \\
-\mathop{\text{minimize}}_{\mathbf{R} \in  SO(3)}  \sum\limits_{i=1}^k \left\| \mathbf{R} \overline{\mathbf{x}}_i - \overline{\mathbf{p}}_i \right\|^2 \\
-\mathop{\text{minimize}}_{\mathbf{R} \in  SO(3)}  \left\| \mathbf{R} \overline{\mathbf{X}}^{\top} - \overline{\mathbf{P}}^{\top} \right\|_F^2,
+\mathop{\text{minimize}}_{\mathbf{R} \in  SO(3)}  \sum\limits_{i=1}^k \left|| \mathbf{R} \mathbf{x}_i + ( \overline{\mathbf{p}} - \mathbf{R}\overline{\mathbf{x}}) - \mathbf{p}_i \right||^2 \\
+\mathop{\text{minimize}}_{\mathbf{R} \in  SO(3)}  \sum\limits_{i=1}^k \left|| \mathbf{R} (\mathbf{x}_i - \overline{\mathbf{x}}) - (\mathbf{p}_i - \overline{\mathbf{p}}) \right||^2 \\
+\mathop{\text{minimize}}_{\mathbf{R} \in  SO(3)}  \sum\limits_{i=1}^k \left|| \mathbf{R} \overline{\mathbf{x}}_i - \overline{\mathbf{p}}_i \right||^2 \\
+\mathop{\text{minimize}}_{\mathbf{R} \in  SO(3)}  \left|| \mathbf{R} \overline{\mathbf{X}}^{\top} - \overline{\mathbf{P}}^{\top} \right||_F^2,
 \end{align*}
+$$
 
 
 where we introduce $\overline{\mathbf{X}} \in  \mathbb{R}^{k \times  3}$ where the ith row contains the
@@ -448,9 +450,10 @@ $\overline{\mathbf{x}}_i = (\mathbf{x}_i - \overline{\mathbf{x}})$ (and analagou
 
 Now we have the canonical form of the [orthogonal procrustes problem](https://en.wikipedia.org/wiki/Orthogonal_Procrustes_problem). To find the optimal rotation matrix $\mathbf{R}^*$, using the [associativity property](https://en.wikipedia.org/wiki/Associative_property) of the Frobenius norm, we will massage the terms in the _minimization_ until we have a _maximization_ problem involving the [Frobenius inner-product](https://en.wikipedia.org/wiki/Frobenius_inner_product) of the unknown rotation $\mathbf{R}$ and [covariance matrix](https://en.wikipedia.org/wiki/Covariance_matrix) of $\mathbf{X}$ and $\mathbf{P}$:
 
+$$
 \begin{align*}
 \mathbf{R}^* 
-&= \mathop{\text{argmin}}_{\mathbf{R} \in  SO(3)} \left\| \mathbf{R} \overline{\mathbf{X}}^{\top} - \overline{\mathbf{P}}^{\top} \right\|_F^2 \\
+&= \mathop{\text{argmin}}_{\mathbf{R} \in  SO(3)} \left|| \mathbf{R} \overline{\mathbf{X}}^{\top} - \overline{\mathbf{P}}^{\top} \right\|_F^2 \\
 &= \mathop{\text{argmin}}_{\mathbf{R} \in  SO(3)} \left<\mathbf{R} \overline{\mathbf{X}}^{\top} - \overline{\mathbf{P}}^{\top} , \mathbf{R} \overline{\mathbf{X}}^{\top} - \overline{\mathbf{P}}^{\top} \right>_F\\
 &= \mathop{\text{argmin}}_{\mathbf{R} \in  SO(3)} 
 \left<
@@ -461,6 +464,7 @@ Now we have the canonical form of the [orthogonal procrustes problem](https://en
   \overline{\mathbf{P}}^{\top},
   \overline{\mathbf{P}}^{\top} \right>_F \\
 \end{align*}
+$$
 
 where $\left<\mathbf{A}, \mathbf{B} \right>_F$ is the [Frobenius inner product](https://en.wikipedia.org/wiki/Frobenius_inner_product) of  $\mathbf{A}$ and $\mathbf{B}$ (i.e., the sum of all per-element products. In MATLAB syntax: `sum(sum(A.*B))`).  This can be further reduced:
 
