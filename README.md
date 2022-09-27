@@ -178,7 +178,9 @@ entire surfaces rather than generate it from the sole _worst offender_. We can
 accomplish this by replacing the _supremum_ in the Hausdorff distance (
   $L^{\infty}$
   )
-with a integral of squared distances ($L^2$). Let us first define a directed
+with a integral of squared distances (
+  $L^2$
+  ). Let us first define a directed
 _closest-point distance_ from  a surface $X$ to another surface $Y$, as the
 integral of the squared distance from every point $\mathbf{x}$ on $X$ to its
 closest-point projection $P_Y(\mathbf{x})$ on the surfaces $Y$:
