@@ -812,8 +812,7 @@ $$
 
 ### Uniform random sampling of a single triangle
 
-In order to pick a point uniformly randomly in a triangle with corners $\mathbf{v}_1,
-\mathbf{v}_2, \mathbf{v}_3 \in  \mathbb{R}^3$ we will _first_ pick a point uniformly randomly in the
+In order to pick a point uniformly randomly in a triangle with corners $\mathbf{v}\_1, \mathbf{v}\_2, \mathbf{v}\_3 \in  \mathbb{R}^3$ we will _first_ pick a point uniformly randomly in the
 [parallelogram](https://en.wikipedia.org/wiki/Parallelogram) formed by
 reflecting $\mathbf{v}_1$ across the line $\overline{\mathbf{v}_2\mathbf{v}_3}$:
 
