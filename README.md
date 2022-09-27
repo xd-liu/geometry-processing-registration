@@ -503,7 +503,11 @@ Letting $\mathbf{M} = \overline{\mathbf{P}}^{\top}\,\overline{\mathbf{X}}$. We c
 >  6. Properties 3., 4., and 5. imply that Frobenius inner product of a matrix $\mathbf{A}$ and the matrix product of matrix $\mathbf{B}$ and $\mathbf{C}$ is equal to the Frobenius inner product of the matrix product of the transpose of $\mathbf{B}$ and $\mathbf{A}$  and the matrix $\mathbf{C}$: 
 > 
 > $$
-\begin{align*}\left<\mathbf{A},\mathbf{B}\mathbf{C}\right>_F &= \text{vec}(\mathbf{A})^{\top} \text{vec}(\mathbf{B}\mathbf{C}) \\ &= \text{vec}(\mathbf{A})^{\top} (\mathbf{I} \otimes  \mathbf{B})\text{vec}(\mathbf{C}) \\ &= \text{vec}(\mathbf{A})^{\top} (\mathbf{I} \otimes  \mathbf{B}^{\top})^{\top} \text{vec}(\mathbf{C}) \\ &= \text{vec}(\mathbf{B}^{\top}\mathbf{A})^{\top} \text{vec}(\mathbf{C}) \\ &= \left<\mathbf{B}^{\top} \mathbf{A},\mathbf{C}\right>_F \end{align*}.
+\begin{align*}\left<\mathbf{A},\mathbf{B}\mathbf{C}\right>_F &= \text{vec}(\mathbf{A})^{\top} \text{vec}(\mathbf{B}\mathbf{C}) \\ 
+&= \text{vec}(\mathbf{A})^{\top} (\mathbf{I} \otimes  \mathbf{B})\text{vec}(\mathbf{C}) \\ 
+&= \text{vec}(\mathbf{A})^{\top} (\mathbf{I} \otimes  \mathbf{B}^{\top})^{\top} \text{vec}(\mathbf{C}) \\ 
+&= \text{vec}(\mathbf{B}^{\top}\mathbf{A})^{\top} \text{vec}(\mathbf{C}) \\ 
+&= \left<\mathbf{B}^{\top} \mathbf{A},\mathbf{C}\right>_F \end{align*}.
 $$
 
 _Any_ matrix can be written in terms of its [singular value decomposition](https://en.wikipedia.org/wiki/Singular_value_decomposition). Let's do this for our covariance matrix: $\mathbf{M} = \mathbf{U} \sigma  \mathbf{V}^{\top}$, where $\mathbf{U}, \mathbf{V} \in  \mathbb{R}^{3\times 3}$ are orthonormal matrices and $\sigma \in \mathbb{R}^{3\times 3}$ is a non-negative diagonal matrix:
