@@ -702,7 +702,7 @@ Expanding all terms, moving the summations inside like terms, we can expose this
 
 $$
 \mathop{\text{minimize}}\_{\mathbf{u}\in \mathbb{R}^{6}} 
-\mathbf{u}^\top
+\mathbf{u}^{\top}
 \underbrace{
 \left(
   \sum\_{i=1}^k 
@@ -710,10 +710,7 @@ $$
       \left[ (\mathbf{x}\_i \times \hat{\mathbf{n}}\_i)^\top \  \hat{\mathbf{n}}\_i^\top \right]
 \right)
 }\_{\mathbf{A}}
-\mathbf{u}
--
-2
-\mathbf{u}^\top
+\mathbf{u}-2\mathbf{u}^{\top}
 \underbrace{
 \left(
   \sum\_{i=1}^k 
