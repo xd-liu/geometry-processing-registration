@@ -57,7 +57,7 @@ The usually Euclidean distance between _two points_ $\mathbf{x}$ and $\mathbf{y}
 norm of their difference :
 
 $$
-d(\mathbf{x},\mathbf{y}) = \| \mathbf{x} - \mathbf{y}\| .
+d(\mathbf{x},\mathbf{y}) = || \mathbf{x} - \mathbf{y}|| .
 $$
 
 
@@ -79,7 +79,7 @@ this distance instead as simply the point-to-point distance between $\mathbf{x}$
 the _closest-point projection_ $P_Y(\mathbf{x})$:
 
 $$
-d(\mathbf{x},Y) = d((\mathbf{x},P_Y(\mathbf{x})) = \| \mathbf{x} - P_Y(\mathbf{x})\| .
+d(\mathbf{x},Y) = d((\mathbf{x},P_Y(\mathbf{x})) = || \mathbf{x} - P_Y(\mathbf{x})|| .
 $$
 
 
@@ -95,7 +95,7 @@ We might be tempted to define the distance from surface $X$ to $Y$ as the
 _infimum_ of _point-to-projection_ distances over all points $\mathbf{x}$ on $X$:
 
 $$
-D_\text{inf}(X,Y) = \inf_{\mathbf{x} \in  X} \| \mathbf{x} - P_Y(\mathbf{x})\| ,
+D_\text{inf}(X,Y) = \inf_{\mathbf{x} \in  X} || \mathbf{x} - P_Y(\mathbf{x})|| ,
 $$
 
 but this will not be useful for registering two surfaces: it will measure zero
@@ -106,7 +106,7 @@ Instead, we should take the _supremum_ of _point-to-projection_ distances over
 all points $\mathbf{x}$ on $X$:
 
 $$
-D_{\overrightarrow{H}}(X,Y) = \sup_{\mathbf{x} \in  X} \| \mathbf{x} - P_Y(\mathbf{x})\| .
+D_{\overrightarrow{H}}(X,Y) = \sup_{\mathbf{x} \in  X} || \mathbf{x} - P_Y(\mathbf{x})|| .
 $$
 
 
@@ -143,7 +143,7 @@ cloud](https://en.wikipedia.org/wiki/Point_cloud) $\mathbf{P}_X$ to $Y$:
 
 $$
 D_{\overrightarrow{H}}(X,Y) \ge  
-D_{\overrightarrow{H}}(\mathbf{P}_X,Y) = \max_{i=1}^k \| \mathbf{p}_i - P_Y(\mathbf{p}_i)\| ,
+D_{\overrightarrow{H}}(\mathbf{P}_X,Y) = \max_{i=1}^k || \mathbf{p}_i - P_Y(\mathbf{p}_i)|| ,
 $$
 
 
@@ -186,7 +186,7 @@ integral of the squared distance from every point $\mathbf{x}$ on $X$ to its
 closest-point projection $P_Y(\mathbf{x})$ on the surfaces $Y$:
 
 $$
-D_{\overrightarrow{C}}(X,Y) = \sqrt{\ \int \limits_{\mathbf{x}\in X} \| \mathbf{x} - P_Y(\mathbf{x}) \| ^{2} \;dA }.
+D_{\overrightarrow{C}}(X,Y) = \sqrt{\ \int \limits_{\mathbf{x}\in X} || \mathbf{x} - P_Y(\mathbf{x}) || ^{2} \;dA }.
 $$
 
 
@@ -201,8 +201,8 @@ $E_{\overrightarrow{C}}(Z,Y)$ from $Z$ to $Y$ to be the squared directed
 closest point distance from $X$ to $Y$:
 
 $$
-E_{\overrightarrow{C}}(Z,Y) = \int \limits_{\mathbf{z}\in Z} \| \mathbf{z} - P_Y(\mathbf{z}) \| ^{2} \;dA =
-\int \limits_{\mathbf{z}\in Z} \| f_Y(\mathbf{z}) \| ^{2} \;dA
+E_{\overrightarrow{C}}(Z,Y) = \int \limits_{\mathbf{z}\in Z} || \mathbf{z} - P_Y(\mathbf{z}) || ^{2} \;dA =
+\int \limits_{\mathbf{z}\in Z} || f_Y(\mathbf{z}) || ^{2} \;dA
 $$
 
 
@@ -315,7 +315,7 @@ $Y$:
 
 $$
 \mathop{\text{minimize}}\_{\mathbf{t}\in \mathbb{R}^{3},\ \mathbf{R} \in  SO(3)} 
-  \int \limits_{\mathbf{x}\in X} \| \mathbf{R} \mathbf{x} + \mathbf{t} - P\_Y(T(\mathbf{x})) \| ^{2} \;dA
+  \int \limits_{\mathbf{x}\in X} || \mathbf{R} \mathbf{x} + \mathbf{t} - P\_Y(T(\mathbf{x})) || ^{2} \;dA
 $$
 
 
@@ -325,7 +325,7 @@ _summing_ over a point-sampling of $X$:
 
 $$
 \mathop{\text{minimize}}\_{\mathbf{t}\in \mathbb{R}^{3},\ \mathbf{R} \in  SO(3)} 
-  {\sum}\_{i=1}^k \| \mathbf{R} \mathbf{x}\_i + \mathbf{t} - P\_Y(T(\mathbf{x}\_i)) \| ^{2},
+  {\sum}\_{i=1}^k || \mathbf{R} \mathbf{x}\_i + \mathbf{t} - P\_Y(T(\mathbf{x}\_i)) || ^{2},
 $$
 
 
@@ -382,7 +382,7 @@ The point-to-point (gradient descent) rigid matching problem solves:
 
 $$
 \mathop{\text{minimize}}\_{\mathbf{R} \in SO(3),\mathbf{t} \in \mathbb{R}^3} 
-\sum_{i=1}^k \| \mathbf{R} \mathbf{x}\_i + \mathbf{t} - \mathbf{p}\_i\|^2
+\sum_{i=1}^k || \mathbf{R} \mathbf{x}\_i + \mathbf{t} - \mathbf{p}\_i||^2
 $$
 
 This is a variant of what's known as a [Procrustes problem](https://en.wikipedia.org/wiki/Orthogonal_Procrustes_problem), named after a [mythical psychopath](https://en.wikipedia.org/wiki/Procrustes) who would kidnap people and force them to fit in his bed by stretching them or cutting off their legs. In our case, we are forcing $\mathbf{R}$ to be perfectly orthogonal (no "longer", no "shorter").
@@ -453,7 +453,7 @@ Now we have the canonical form of the [orthogonal procrustes problem](https://en
 $$
 \begin{align*}
 \mathbf{R}^* 
-&= \mathop{\text{argmin}}_{\mathbf{R} \in  SO(3)} \left|| \mathbf{R} \overline{\mathbf{X}}^{\top} - \overline{\mathbf{P}}^{\top} \right\|_F^2 \\
+&= \mathop{\text{argmin}}_{\mathbf{R} \in  SO(3)} \left|| \mathbf{R} \overline{\mathbf{X}}^{\top} - \overline{\mathbf{P}}^{\top} \right||_F^2 \\
 &= \mathop{\text{argmin}}_{\mathbf{R} \in  SO(3)} \left<\mathbf{R} \overline{\mathbf{X}}^{\top} - \overline{\mathbf{P}}^{\top} , \mathbf{R} \overline{\mathbf{X}}^{\top} - \overline{\mathbf{P}}^{\top} \right>_F\\
 &= \mathop{\text{argmin}}_{\mathbf{R} \in  SO(3)} 
 \left<
@@ -470,7 +470,7 @@ where $\left<\mathbf{A}, \mathbf{B} \right>_F$ is the [Frobenius inner product](
 
 \begin{align*}
 \mathbf{R}^* 
-&= \mathop{\text{argmin}}_{\mathbf{R} \in  SO(3)} \left\| \overline{\mathbf{X}} \right\|_F^2 + \left\| \overline{\mathbf{P}} \right\|_F^2 - 2 \left<\mathbf{R} \overline{\mathbf{X}}^{\top} , \overline{\mathbf{P}}^{\top} \right>_F\\
+&= \mathop{\text{argmin}}_{\mathbf{R} \in  SO(3)} \left|| \overline{\mathbf{X}} \right||_F^2 + \left|| \overline{\mathbf{P}} \right||_F^2 - 2 \left<\mathbf{R} \overline{\mathbf{X}}^{\top} , \overline{\mathbf{P}}^{\top} \right>_F\\
 \end{align*}
 
 > **Question:** what is $\mathbf{R}^\top \mathbf{R}$?
@@ -562,7 +562,7 @@ The point-to-plane (Gauss-Newton) rigid matching problem solves:
 
 $$
 \mathop{\text{minimize}}_{\mathbf{R} \in SO(3),\mathbf{t} \in \mathbb{R}^3} 
-\sum_{i=1}^k \| \mathbf{R} \mathbf{x}_i + \mathbf{t} - \mathbf{p}_i)\cdot \hat{\mathbf{n}}_i \hat{\mathbf{n}}_i \|^2,
+\sum_{i=1}^k || \mathbf{R} \mathbf{x}_i + \mathbf{t} - \mathbf{p}_i)\cdot \hat{\mathbf{n}}_i \hat{\mathbf{n}}_i ||^2,
 $$
 
 where $\hat{\mathbf{n}}_i \in \mathbb{R}^3$ is the unit normal at the located closest point $\mathbf{p}_i$. Since $\hat{\mathbf{n}}$ is a unit vector the norm is only measuring the proceeding term $\mathbf{R} \mathbf{x}_i + \mathbf{t} - \mathbf{p}_i)\cdot \hat{\mathbf{n}}_i$, so we can reduce this problem to:
@@ -757,7 +757,7 @@ $$
 
 
 then our transformation will _not_ be rigid. Instead, we should _recover_ the
-axis and angle of rotation from $\mathbf{a}$ via $\theta = \|\mathbf{a}\|$ and
+axis and angle of rotation from $\mathbf{a}$ via $\theta = ||\mathbf{a}||$ and
 $\hat{\mathbf{w}} = \mathbf{a}/\theta$ and then update our rotation via the <a
 href=#aa>_**axis-angle to matrix formula**_ above</a>. Because we used a
 linearization of the rotation constraint, we cannot assume that we have
