@@ -677,60 +677,61 @@ $$
 
 Let's gather a vector of unknowns: $\mathbf{u}^{\top} =[\mathbf{a}^{\top}  \mathbf{t}^{\top}] \in  \mathbb{R}^{6}$. Then we can use properties of the [triple product](https://en.wikipedia.org/wiki/Triple_product) to rewrite our problem as:
 
-
+$$
 \begin{align}
-\mathop{\text{minimize}}_{\mathbf{a},\mathbf{t}\in \mathbb{R}^{3}} 
-  {\sum}_{i=1}^k 
+\mathop{\text{minimize}}\_{\mathbf{a},\mathbf{t}\in \mathbb{R}^{3}} 
+  {\sum}\_{i=1}^k 
   \left( 
-    (\mathbf{x}_i \times \hat{\mathbf{n}}_i)^\top \mathbf{a} +
-    \hat{\mathbf{n}}_i^\top \mathbf{t} -
-    \hat{\mathbf{n}}_i^\top (\mathbf{p}_i-\mathbf{x}_i)
+    (\mathbf{x}\_i \times \hat{\mathbf{n}}\_i)^\top \mathbf{a} +
+    \hat{\mathbf{n}}\_i^\top \mathbf{t} -
+    \hat{\mathbf{n}}\_i^\top (\mathbf{p}\_i-\mathbf{x}\_i)
   \right)^2, \\
-\mathop{\text{minimize}}_{\mathbf{u}\in \mathbb{R}^{6}} 
-  {\sum}_{i=1}^k 
+\mathop{\text{minimize}}\_{\mathbf{u}\in \mathbb{R}^{6}} 
+  {\sum}\_{i=1}^k 
   \left( 
     \left[ 
-      (\mathbf{x}_i \times \hat{\mathbf{n}}_i)^\top \  \hat{\mathbf{n}}_i^\top
+      (\mathbf{x}\_i \times \hat{\mathbf{n}}\_i)^\top \  \hat{\mathbf{n}}\_i^\top
     \right]
     \mathbf{u}
-    - \hat{\mathbf{n}}_i^\top (\mathbf{p}_i-\mathbf{x}_i)
+    - \hat{\mathbf{n}}\_i^\top (\mathbf{p}\_i-\mathbf{x}\_i)
   \right)^2.
 \end{align}
+$$
 
 Expanding all terms, moving the summations inside like terms, we can expose this in familiar quadratic energy minimization form:
 
 $$
-\mathop{\text{minimize}}_{\mathbf{u}\in \mathbb{R}^{6}} 
+\mathop{\text{minimize}}\_{\mathbf{u}\in \mathbb{R}^{6}} 
 \mathbf{u}^\top
 \underbrace{
 \left(
-  \sum_{i=1}^k 
-      \begin{bmatrix} (\mathbf{x}_i \times \hat{\mathbf{n}}_i) \\  \hat{\mathbf{n}}_i \end{bmatrix}
-      \left[ (\mathbf{x}_i \times \hat{\mathbf{n}}_i)^\top \  \hat{\mathbf{n}}_i^\top \right]
+  \sum\_{i=1}^k 
+      \begin{bmatrix} (\mathbf{x}\_i \times \hat{\mathbf{n}}\_i) \\  \hat{\mathbf{n}}\_i \end{bmatrix}
+      \left[ (\mathbf{x}\_i \times \hat{\mathbf{n}}\_i)^\top \  \hat{\mathbf{n}}\_i^\top \right]
 \right)
-}_{\mathbf{A}}
+}\_{\mathbf{A}}
 \mathbf{u}
 -
 2
 \mathbf{u}^\top
 \underbrace{
 \left(
-  \sum_{i=1}^k 
-      \begin{bmatrix} (\mathbf{x}_i \times \hat{\mathbf{n}}_i) \\  \hat{\mathbf{n}}_i \end{bmatrix}
-      \hat{\mathbf{n}}_i^\top
-      (\mathbf{p}_i-\mathbf{x}_i)
+  \sum\_{i=1}^k 
+      \begin{bmatrix} (\mathbf{x}\_i \times \hat{\mathbf{n}}\_i) \\  \hat{\mathbf{n}}\_i \end{bmatrix}
+      \hat{\mathbf{n}}\_i^\top
+      (\mathbf{p}\_i-\mathbf{x}\_i)
 \right)
-}_{\mathbf{b}}
+}\_{\mathbf{b}}
 +
 \underbrace{
 \left(
-  \sum_{i=1}^k 
-      (\mathbf{p}_i-\mathbf{x}_i)^\top
-      \hat{\mathbf{n}}_i
-      \hat{\mathbf{n}}_i^\top
-      (\mathbf{p}_i-\mathbf{x}_i)
+  \sum\_{i=1}^k 
+      (\mathbf{p}\_i-\mathbf{x}\_i)^\top
+      \hat{\mathbf{n}}\_i
+      \hat{\mathbf{n}}\_i^\top
+      (\mathbf{p}\_i-\mathbf{x}\_i)
 \right)
-}_{\text{constant}}
+}\_{\text{constant}}
 $$
 
 Gather coefficients into $\mathbf{A} \in \mathbb{R}^{6\times 6}$ and $\mathbf{b} \in \mathbb{R}^6$, we have a compact quadratic minimization problem in $\mathbf{u}$:
