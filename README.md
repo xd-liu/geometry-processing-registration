@@ -314,8 +314,8 @@ possible rotation $\mathbf{R}$ and translation $\mathbf{t}$ that match surface $
 $Y$:
 
 $$
-\mathop{\text{minimize}}_{\mathbf{t}\in \mathbb{R}^{3},\ \mathbf{R} \in  SO(3)} 
-  \int \limits_{\mathbf{x}\in X} \| \mathbf{R} \mathbf{x} + \mathbf{t} - P_Y(T(\mathbf{x})) \| ^{2} \;dA
+\mathop{\text{minimize}}\_{\mathbf{t}\in \mathbb{R}^{3},\ \mathbf{R} \in  SO(3)} 
+  \int \limits_{\mathbf{x}\in X} \| \mathbf{R} \mathbf{x} + \mathbf{t} - P\_Y(T(\mathbf{x})) \| ^{2} \;dA
 $$
 
 
@@ -324,8 +324,8 @@ points on the surface of $X$. _At any point_, we can approximate this energy by
 _summing_ over a point-sampling of $X$:
 
 $$
-\mathop{\text{minimize}}_{\mathbf{t}\in \mathbb{R}^{3},\ \mathbf{R} \in  SO(3)} 
-  {\sum}_{i=1}^k \| \mathbf{R} \mathbf{x}_i + \mathbf{t} - P_Y(T(\mathbf{x}_i)) \| ^{2},
+\mathop{\text{minimize}}\_{\mathbf{t}\in \mathbb{R}^{3},\ \mathbf{R} \in  SO(3)} 
+  {\sum}\_{i=1}^k \| \mathbf{R} \mathbf{x}\_i + \mathbf{t} - P\_Y(T(\mathbf{x}\_i)) \| ^{2},
 $$
 
 
