@@ -87,8 +87,7 @@ If $Y$ is a smooth surface, this projection will also be an [orthogonal
 projection](https://en.wikipedia.org/wiki/Projection_(linear_algebra)#Orthogonal_projections).
 
 
-![The distance between a surface $Y$ (light blue) and a point $\mathbf{x}$ (orange) is
-determined by the closest point $P_Y(\mathbf{x})$ (blue)](images/max-point-mesh.gif)
+![](images/max-point-mesh.gif)
 
 ### Directed Hausdorff distance
 
