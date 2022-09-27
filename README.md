@@ -790,8 +790,7 @@ integration](https://en.wikipedia.org/wiki/Numerical_integration) is called the
 We would like our [random
 variable](https://en.wikipedia.org/wiki/Random_variable) $\mathbf{x} \in  X$ to have a
 uniform [probability density
-function](https://en.wikipedia.org/wiki/Probability_density_function) $f(\mathbf{x}) =
-1/A_X$, where $A_X$ is the [surface
+function](https://en.wikipedia.org/wiki/Probability_density_function) $f(\mathbf{x}) = 1/A\_X$, where $A\_X$ is the [surface
 area](https://en.wikipedia.org/wiki/Surface_area) of the triangle mesh $X$. We
 can achieve this by breaking the problem into two steps: uniformly sampling in
 a single triangle and sampling triangles non-uniformly according to their
@@ -824,7 +823,7 @@ $$
 
 
 where ${a_1},{a_2}$ are uniformly sampled from the unit interval $[0,1]$. If ${a_1}+{a_2} > 1$
-then the point $\mathbf{x}$ above will lie in the reflected triangle rather than the
+then the point $\mathbf{x}$ above will lie in the reflected triangle rather than theUniform random sampling of a triangle mesh
 original one. In this case, preprocess ${a_1}$ and ${a_2}$ by setting ${a_1}\Leftarrow 1-{a_1}$ and
 ${a_2}\Leftarrow 1-{a_2}$ to reflect the point $\mathbf{x}$ back into the original triangle.
 
