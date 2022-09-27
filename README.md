@@ -357,8 +357,7 @@ icp V_X, F_X, V_Y, F_Y
 ### Updating the rigid transformation
 
 We would like to find the rotation matrix $\mathbf{R} \in  SO(3) \subset  \mathbb{R}^{3\times 3}$ and
-translation vector $\mathbf{t}\in \mathbb{R}^{3}$ that _best_ aligns a given a set of points $\mathbf{X} \in 
-\mathbb{R}^{k\times 3}$ on the source mesh and their current closest points $\mathbf{P} \in  \mathbb{R}^{k\times 3}$
+translation vector $\mathbf{t}\in \mathbb{R}^{3}$ that _best_ aligns a given a set of points $\mathbf{X} \in \mathbb{R}^{k\times 3}$ on the source mesh and their current closest points $\mathbf{P} \in  \mathbb{R}^{k\times 3}$
 on the target mesh. We have two choices for _linearizing_ our matching energy:
 point-to-point (gradient descent) and point-to-plane (Gauss-Newton).
 
