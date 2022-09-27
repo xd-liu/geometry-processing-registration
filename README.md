@@ -163,7 +163,7 @@ between surfaces $X$ and $Y$ as an energy to be minimized, then only change to
 the surfaces that will decrease the energy will be moving the (in general)
 isolated point on $X$ and isolated point on $Y$ generating the maximum-minimum
 distance. In effect, the rest of the surface does not even matter or effect the
-Hausdorff distance. This, or any type of $L^\infty $ norm, will be much more
+Hausdorff distance. This, or any type of $L^\infty$ norm, will be much more
 difficult to optimize.
 
 Hausdorff distance can serve as a validation measure, while we turn to $L^{2}$
