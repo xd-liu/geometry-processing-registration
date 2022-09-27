@@ -251,11 +251,11 @@ _geometrically_.
 ### Constant function approximation
 
 If we make the convenient—however unrealistic—assumption that in the
-neighborhood of the closest-point projection $P_Y(\mathbf{z}_{0})$ of the current guess
-$\mathbf{z}_{0}$ the surface $Y$ is simply the point $P_Y(\mathbf{z}_{0})$ (perhaps imagine that $Y$
-is makes a sharp needle-like point at $P_Y(\mathbf{z}_{0})$ or that $Y$ is very far away
+neighborhood of the closest-point projection $P\_Y(\mathbf{z}\_{0})$ of the current guess
+$\mathbf{z}\_{0}$ the surface $Y$ is simply the point $P\_Y(\mathbf{z}\_{0})$ (perhaps imagine that $Y$
+is makes a sharp needle-like point at $P\_Y(\mathbf{z}\_{0})$ or that $Y$ is very far away
 from $\mathbf{x}$), then we can approximate $\mathbf{f}(\mathbf{z})$ in the proximity of our current
-guess $\mathbf{z}_{0}$ as the vector between the input point $\mathbf{z}$ and $P_Y(\mathbf{z}_{0})$:
+guess $\mathbf{z}\_{0}$ as the vector between the input point $\mathbf{z}$ and $P\_Y(\mathbf{z}\_{0})$:
 
 $$
 \mathbf{f}(\mathbf{z}) \approx \mathbf{f}_\text{point}(\mathbf{z}) = \mathbf{z}-P_Y(\mathbf{z}_{0})
