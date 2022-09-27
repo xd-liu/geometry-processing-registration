@@ -538,7 +538,7 @@ $$
 $$
 
 
-This ensures that as a result $\mathbf{R}^*$ will be a rotation: $\det{\mathbf{R}^*} = 1$.
+This ensures that as a result $\mathbf{R}^\*$ will be a rotation: $\det{\mathbf{R}^\*} = 1$.
 
 > Recall that $\sigma \in \mathbb{R}^{3\times 3}$ is a non-negative diagonal matrix of singular values
 > sorted so that the smallest value is in the bottom right corner.
