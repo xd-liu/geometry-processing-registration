@@ -455,7 +455,7 @@ Now we have the canonical form of the [orthogonal procrustes problem](https://en
 $$
 \mathbf{R}^* = \mathop{\text{argmin}}_{\mathbf{R} \in  SO(3)} \left|| \mathbf{R} \overline{\mathbf{X}}^{\top} - \overline{\mathbf{P}}^{\top} \right||_F^2 \\
 &= \mathop{\text{argmin}}_{\mathbf{R} \in  SO(3)} \left<\mathbf{R} \overline{\mathbf{X}}^{\top} - \overline{\mathbf{P}}^{\top} , \mathbf{R} \overline{\mathbf{X}}^{\top} - \overline{\mathbf{P}}^{\top} \right>_F\\
-&= \mathop{\text{argmin}}_{\mathbf{R} \in  SO(3)} 
+= \mathop{\text{argmin}}_{\mathbf{R} \in  SO(3)} 
 \left< \mathbf{R} \overline{\mathbf{X}}^{\top},
   \mathbf{R} \overline{\mathbf{X}}^{\top} \right>_F - 2 \left<\mathbf{R} \overline{\mathbf{X}}^{\top} , \overline{\mathbf{P}}^\top \right>_F + \left<
   \overline{\mathbf{P}}^{\top},
