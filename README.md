@@ -701,12 +701,13 @@ $$
 Expanding all terms, moving the summations inside like terms, we can expose this in familiar quadratic energy minimization form:
 
 $$
-\mathop{\text{minimize}}\_{\mathbf{u}\in \mathbb{R}^{6}} 
+\mathop{\text{minimize}}\_{\, \mathbf{u}\in \mathbb{R}^{6}} 
 \mathbf{u}^{\top}
 \underbrace{
 \left(
   \sum\_{i=1}^k 
-      \begin{bmatrix} (\mathbf{x}\_i \times \hat{\mathbf{n}}\_i) \\  \hat{\mathbf{n}}\_i \end{bmatrix}
+      \begin{bmatrix} (\mathbf{x}\_i \times \hat{\mathbf{n}}\_i) \\  \hat{\mathbf{n}}\_i 
+      \end{bmatrix}
       \left[ (\mathbf{x}\_i \times \hat{\mathbf{n}}\_i)^\top \  \hat{\mathbf{n}}\_i^\top \right]
 \right)
 }\_{\mathbf{A}}
