@@ -665,18 +665,17 @@ If we apply our linearization of $\mathbf{R}$ to the **point-to-plane** distance
 linearization of the matching energy, our minimization is:
 
 $$
-\mathop{\text{minimize}}_{\mathbf{t}\in \mathbb{R}^{3}, {a_1}, {a_2}, {a_2}} 
-  {\sum}_{i=1}^k 
+\mathop{\text{minimize}}\_{\mathbf{t}\in \mathbb{R}^{3}, {a\_1}, {a\_2}, {a\_2}} 
+  {\sum}\_{i=1}^k 
   \left( 
   \left( 
-  \mathbf{x}_i +
-  \mathbf{a} \times \mathbf{x}_i + \mathbf{t} - \mathbf{p}_i 
-  \right)\cdot \mathbf{n}_i
+  \mathbf{x}\_i +
+  \mathbf{a} \times \mathbf{x}\_i + \mathbf{t} - \mathbf{p}\_i 
+  \right)\cdot \mathbf{n}\_i
   \right)^2.
 $$
 
-Let's gather a vector of unknowns: $\mathbf{u}^\top =
-[\mathbf{a}^\top \ \mathbf{t}^{\top}] \in  \mathbb{R}^{6}$. Then we can use properties of the [triple product](https://en.wikipedia.org/wiki/Triple_product) to rewrite our problem as:
+Let's gather a vector of unknowns: $\mathbf{u}^{\top} =[\mathbf{a}^{\top}  \mathbf{t}^{\top}] \in  \mathbb{R}^{6}$. Then we can use properties of the [triple product](https://en.wikipedia.org/wiki/Triple_product) to rewrite our problem as:
 
 
 \begin{align}
