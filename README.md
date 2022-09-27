@@ -397,7 +397,7 @@ $$
 \begin{align*}
 \mathbf{t}^*
 &= \mathop{\text{argmin}}\_{\mathbf{t}} \sum\_{i=1}^k || \mathbf{R} \mathbf{x}\_i + \mathbf{t} - \mathbf{p}\_i|| ^{2}  \\
-&= \mathop{\text{argmin}}\_\mathbf{t} \left||\mathbf{R} \mathbf{X}^{\top} + \mathbf{t} \mathbf{1}^{\top} - \mathbf{P}^{\top}\right||^2\_F,
+&= \mathop{\text{argmin}}\_\mathbf{t} ||\mathbf{R} \mathbf{X}^{\top} + \mathbf{t} \mathbf{1}^{\top} - \mathbf{P}^{\top}||^2\_F,
 \end{align*}
 $$
 
@@ -406,7 +406,7 @@ where $\mathbf{1} \in  \mathbb{R}^{k}$ is a vector ones and $||\mathbf{X}||_F^2$
 $$
 \begin{align*}
 0 
-&= \frac{\partial }{\partial \mathbf{t}} \left||\mathbf{R} \mathbf{X}^{\top} + \mathbf{t} \mathbf{1}^{\top} - \mathbf{P}^{\top}\right||^2_F \\
+&= \frac{\partial }{\partial \mathbf{t}} ||\mathbf{R} \mathbf{X}^{\top} + \mathbf{t} \mathbf{1}^{\top} - \mathbf{P}^{\top}||^2_F \\
 &= \mathbf{1}^{\top} \mathbf{1} \mathbf{t} + \mathbf{R} \mathbf{X}^{\top} \mathbf{1} - \mathbf{P}^{\top} \mathbf{1},
 \end{align*}
 $$
@@ -437,10 +437,10 @@ form:
 
 $$
 \begin{align*}
-\mathop{\text{minimize}}\_{\mathbf{R} \in  SO(3)}  \sum\limits\_{i=1}^k \left|| \mathbf{R} \mathbf{x}\_i + ( \overline{\mathbf{p}} - \mathbf{R}\overline{\mathbf{x}}) - \mathbf{p}\_i \right||^2 \\
-\mathop{\text{minimize}}\_{\mathbf{R} \in  SO(3)}  \sum\limits\_{i=1}^k \left|| \mathbf{R} (\mathbf{x}\_i - \overline{\mathbf{x}}) - (\mathbf{p}\_i - \overline{\mathbf{p}}) \right||^2 \\
-\mathop{\text{minimize}}\_{\mathbf{R} \in  SO(3)}  \sum\limits\_{i=1}^k \left|| \mathbf{R} \overline{\mathbf{x}}\_i - \overline{\mathbf{p}}\_i \right||^2 \\
-\mathop{\text{minimize}}\_{\mathbf{R} \in  SO(3)}  \left|| \mathbf{R} \overline{\mathbf{X}}^{\top} - \overline{\mathbf{P}}^{\top} \right||\_F^2,
+\mathop{\text{minimize}}\_{\mathbf{R} \in  SO(3)}  \sum\limits\_{i=1}^k || \mathbf{R} \mathbf{x}\_i + ( \overline{\mathbf{p}} - \mathbf{R}\overline{\mathbf{x}}) - \mathbf{p}\_i ||^2 \\
+\mathop{\text{minimize}}\_{\mathbf{R} \in  SO(3)}  \sum\limits\_{i=1}^k || \mathbf{R} (\mathbf{x}\_i - \overline{\mathbf{x}}) - (\mathbf{p}\_i - \overline{\mathbf{p}}) ||^2 \\
+\mathop{\text{minimize}}\_{\mathbf{R} \in  SO(3)}  \sum\limits\_{i=1}^k || \mathbf{R} \overline{\mathbf{x}}\_i - \overline{\mathbf{p}}\_i ||^2 \\
+\mathop{\text{minimize}}\_{\mathbf{R} \in  SO(3)}  || \mathbf{R} \overline{\mathbf{X}}^{\top} - \overline{\mathbf{P}}^{\top} ||\_F^2,
 \end{align*}
 $$
 
@@ -455,7 +455,7 @@ Now we have the canonical form of the [orthogonal procrustes problem](https://en
 $$
 \begin{align*}
 \mathbf{R}^* 
-&= \mathop{\text{argmin}}\_{\mathbf{R} \in  SO(3)} \left|| \mathbf{R} \overline{\mathbf{X}}^{\top} - \overline{\mathbf{P}}^{\top} \right||\_F^2 \\
+&= \mathop{\text{argmin}}\_{\mathbf{R} \in  SO(3)} || \mathbf{R} \overline{\mathbf{X}}^{\top} - \overline{\mathbf{P}}^{\top} ||\_F^2 \\
 &= \mathop{\text{argmin}}\_{\mathbf{R} \in  SO(3)} \left<\mathbf{R} \overline{\mathbf{X}}^{\top} - \overline{\mathbf{P}}^{\top} , \mathbf{R} \overline{\mathbf{X}}^{\top} - \overline{\mathbf{P}}^{\top} \right>\_F\\
 &= \mathop{\text{argmin}}\_{\mathbf{R} \in  SO(3)} 
 \left<
@@ -471,7 +471,7 @@ where $\left<\mathbf{A}, \mathbf{B} \right>_F$ is the [Frobenius inner product](
 $$
 \begin{align*}
 \mathbf{R}^* 
-&= \mathop{\text{argmin}}_{\mathbf{R} \in  SO(3)} \left|| \overline{\mathbf{X}} \right||_F^2 + \left|| \overline{\mathbf{P}} \right||_F^2 - 2 \left<\mathbf{R} \overline{\mathbf{X}}^{\top} , \overline{\mathbf{P}}^{\top} \right>_F\\
+&= \mathop{\text{argmin}}_{\mathbf{R} \in  SO(3)} || \overline{\mathbf{X}} ||_F^2 + || \overline{\mathbf{P}} ||_F^2 - 2 \left<\mathbf{R} \overline{\mathbf{X}}^{\top} , \overline{\mathbf{P}}^{\top} \right>_F\\
 \end{align*}
 $$
 
