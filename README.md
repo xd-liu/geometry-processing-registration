@@ -604,6 +604,7 @@ $$
 $$
 
 For a general, rotation axis $\hat{\mathbf{w}}$, we can write a generalized <a id=aa>_**axis-angle to matrix formula**_</a>:
+
 $$
 \mathbf{R}\_{\hat{\mathbf{w}}}(\theta) = 
 \begin{bmatrix}
