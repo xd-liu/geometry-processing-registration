@@ -415,7 +415,7 @@ $$
 Rearranging terms above reveals that the optimal $\mathbf{t}$ is the vector aligning
 the [centroids](https://en.wikipedia.org/wiki/Centroid) of the points in $\mathbf{P}$
 and the points in $\mathbf{X}$ rotated by the — yet-unknown — $\mathbf{R}$. Introducing
-variables for the respective centroids $\overline{\mathbf{p}} = \tfrac{1}{k} \sum\_{i=1}^k \mathbf{p}_i$ and $\overline{\mathbf{x}} = \tfrac{1}{k} {\sum}\_{i=1}^k \mathbf{x}\_i$, we can write the
+variables for the respective centroids $\overline{\mathbf{p}} = \tfrac{1}{k} {\sum}\_{i=1}^k \mathbf{p}_i$ and $\overline{\mathbf{x}} = \tfrac{1}{k} {\sum}\_{i=1}^k \mathbf{x}\_i$, we can write the
 formula for the optimal  $\mathbf{t}$:
 
 
