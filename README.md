@@ -258,7 +258,7 @@ from $\mathbf{x}$), then we can approximate $\mathbf{f}(\mathbf{z})$ in the prox
 guess $\mathbf{z}\_{0}$ as the vector between the input point $\mathbf{z}$ and $P\_Y(\mathbf{z}\_{0})$:
 
 $$
-\mathbf{f}(\mathbf{z}) \approx \mathbf{f}_\text{point}(\mathbf{z}) = \mathbf{z}-P_Y(\mathbf{z}_{0})
+\mathbf{f}(\mathbf{z}) \approx \mathbf{f}\_\text{point}(\mathbf{z}) = \mathbf{z}-P\_Y(\mathbf{z}\_{0})
 $$
 
 
@@ -277,7 +277,7 @@ of the  $P_Y(\mathbf{z}_{0})$ the surface $Y$ is a plane, then we can improve th
 approximation while keeping $\mathbf{f}$ linear in $\mathbf{z}$:
 
 $$
-\mathbf{f}(\mathbf{z}) \approx \mathbf{f}_\text{plane}(\mathbf{z}) = ((\mathbf{z}-P_Y(\mathbf{z}_{0}))\cdot \mathbf{n}) \mathbf{n}.
+\mathbf{f}(\mathbf{z}) \approx \mathbf{f}\_\text{plane}(\mathbf{z}) = ((\mathbf{z}-P\_Y(\mathbf{z}\_{0}))\cdot \mathbf{n}) \mathbf{n}.
 $$
 
 
