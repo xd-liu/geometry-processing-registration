@@ -468,10 +468,12 @@ $$
 
 where $\left<\mathbf{A}, \mathbf{B} \right>_F$ is the [Frobenius inner product](https://en.wikipedia.org/wiki/Frobenius_inner_product) of  $\mathbf{A}$ and $\mathbf{B}$ (i.e., the sum of all per-element products. In MATLAB syntax: `sum(sum(A.*B))`).  This can be further reduced:
 
+$$
 \begin{align*}
 \mathbf{R}^* 
 &= \mathop{\text{argmin}}_{\mathbf{R} \in  SO(3)} \left|| \overline{\mathbf{X}} \right||_F^2 + \left|| \overline{\mathbf{P}} \right||_F^2 - 2 \left<\mathbf{R} \overline{\mathbf{X}}^{\top} , \overline{\mathbf{P}}^{\top} \right>_F\\
 \end{align*}
+$$
 
 > **Question:** what is $\mathbf{R}^\top \mathbf{R}$?
 >
