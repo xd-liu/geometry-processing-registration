@@ -419,11 +419,13 @@ variables for the respective centroids $\overline{\mathbf{p}} = \tfrac{1}{k} {\s
 formula for the optimal  $\mathbf{t}$:
 
 
+$$
 \begin{align*}
 \mathbf{t} 
 &= \frac{\mathbf{P}^{\top} \mathbf{1} - \mathbf{R} \mathbf{X}^{\top} \mathbf{1}}{ \mathbf{1}^{\top} \mathbf{1}} \\
 &= \overline{\mathbf{p}} - \mathbf{R} \overline{\mathbf{x}}.
 \end{align*}
+$$
 
 
 
@@ -435,10 +437,10 @@ form:
 
 $$
 \begin{align*}
-\mathop{\text{minimize}}_{\mathbf{R} \in  SO(3)}  \sum\limits_{i=1}^k \left|| \mathbf{R} \mathbf{x}_i + ( \overline{\mathbf{p}} - \mathbf{R}\overline{\mathbf{x}}) - \mathbf{p}_i \right||^2 \\
-\mathop{\text{minimize}}_{\mathbf{R} \in  SO(3)}  \sum\limits_{i=1}^k \left|| \mathbf{R} (\mathbf{x}_i - \overline{\mathbf{x}}) - (\mathbf{p}_i - \overline{\mathbf{p}}) \right||^2 \\
-\mathop{\text{minimize}}_{\mathbf{R} \in  SO(3)}  \sum\limits_{i=1}^k \left|| \mathbf{R} \overline{\mathbf{x}}_i - \overline{\mathbf{p}}_i \right||^2 \\
-\mathop{\text{minimize}}_{\mathbf{R} \in  SO(3)}  \left|| \mathbf{R} \overline{\mathbf{X}}^{\top} - \overline{\mathbf{P}}^{\top} \right||_F^2,
+\mathop{\text{minimize}}\_{\mathbf{R} \in  SO(3)}  \sum\limits\_{i=1}^k \left|| \mathbf{R} \mathbf{x}\_i + ( \overline{\mathbf{p}} - \mathbf{R}\overline{\mathbf{x}}) - \mathbf{p}\_i \right||^2 \\
+\mathop{\text{minimize}}\_{\mathbf{R} \in  SO(3)}  \sum\limits\_{i=1}^k \left|| \mathbf{R} (\mathbf{x}\_i - \overline{\mathbf{x}}) - (\mathbf{p}\_i - \overline{\mathbf{p}}) \right||^2 \\
+\mathop{\text{minimize}}\_{\mathbf{R} \in  SO(3)}  \sum\limits\_{i=1}^k \left|| \mathbf{R} \overline{\mathbf{x}}\_i - \overline{\mathbf{p}}\_i \right||^2 \\
+\mathop{\text{minimize}}\_{\mathbf{R} \in  SO(3)}  \left|| \mathbf{R} \overline{\mathbf{X}}^{\top} - \overline{\mathbf{P}}^{\top} \right||\_F^2,
 \end{align*}
 $$
 
