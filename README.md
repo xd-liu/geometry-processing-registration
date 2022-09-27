@@ -489,8 +489,7 @@ $$
 
 Letting $\mathbf{M} = \overline{\mathbf{P}}^{\top}\,\overline{\mathbf{X}}$. We can understand this problem as _projecting_ the [covariance matrix](https://en.wikipedia.org/wiki/Covariance_matrix)  $\mathbf{M}$ to the nearest rotation matrix $\mathbf{R}$.
 
-> **Question:** How can we prove that $
-\left<\mathbf{R}\overline{\mathbf{X}}^\top,\overline{\mathbf{P}}^\top\right> \left<\mathbf{R},\overline{\mathbf{P}}^\top\overline{\mathbf{X}}\right>$?
+> **Question:** How can we prove that $\left<\mathbf{R}\overline{\mathbf{X}}^\top,\overline{\mathbf{P}}^\top\right> \left<\mathbf{R},\overline{\mathbf{P}}^\top\overline{\mathbf{X}}\right>$?
 >
 > **Hint:**
 > Recall some linear algebra properties:
