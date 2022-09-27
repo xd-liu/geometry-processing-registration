@@ -453,15 +453,20 @@ Now we have the canonical form of the [orthogonal procrustes problem](https://en
 
 
 $$
-\mathbf{R}^* = \mathop{\text{argmin}}_{\mathbf{R} \in  SO(3)} \left|| \mathbf{R} \overline{\mathbf{X}}^{\top} - \overline{\mathbf{P}}^{\top} \right||_F^2 \\
-= \mathop{\text{argmin}}_{\mathbf{R} \in  SO(3)} \left<\mathbf{R} \overline{\mathbf{X}}^{\top} - \overline{\mathbf{P}}^{\top} , \mathbf{R} \overline{\mathbf{X}}^{\top} - \overline{\mathbf{P}}^{\top} \right>_F\\
-= \mathop{\text{argmin}}_{\mathbf{R} \in  SO(3)} 
-\left< \mathbf{R} \overline{\mathbf{X}}^{\top},
-  \mathbf{R} \overline{\mathbf{X}}^{\top} \right>_F - 2 \left<\mathbf{R} \overline{\mathbf{X}}^{\top} , \overline{\mathbf{P}}^\top \right>_F + \left<
+\begin{align*}
+\mathbf{R}^* 
+&= \mathop{\text{argmin}}_{\mathbf{R} \in  SO(3)} \left|| \mathbf{R} \overline{\mathbf{X}}^{\top} - \overline{\mathbf{P}}^{\top} \right||_F^2 \\
+&= \mathop{\text{argmin}}_{\mathbf{R} \in  SO(3)} \left<\mathbf{R} \overline{\mathbf{X}}^{\top} - \overline{\mathbf{P}}^{\top} , \mathbf{R} \overline{\mathbf{X}}^{\top} - \overline{\mathbf{P}}^{\top} \right>_F\\
+&= \mathop{\text{argmin}}_{\mathbf{R} \in  SO(3)} 
+\left<
+  \mathbf{R} \overline{\mathbf{X}}^{\top},
+  \mathbf{R} \overline{\mathbf{X}}^{\top} \right>_F
+- 2 \left<\mathbf{R} \overline{\mathbf{X}}^{\top} , \overline{\mathbf{P}}^\top \right>_F
++ \left<
   \overline{\mathbf{P}}^{\top},
   \overline{\mathbf{P}}^{\top} \right>_F \\
+\end{align*}
 $$
-
 
 where $\left<\mathbf{A}, \mathbf{B} \right>_F$ is the [Frobenius inner product](https://en.wikipedia.org/wiki/Frobenius_inner_product) of  $\mathbf{A}$ and $\mathbf{B}$ (i.e., the sum of all per-element products. In MATLAB syntax: `sum(sum(A.*B))`).  This can be further reduced:
 
