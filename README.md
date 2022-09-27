@@ -740,12 +740,10 @@ $$
 Gather coefficients into $\mathbf{A} \in \mathbb{R}^{6\times 6}$ and $\mathbf{b} \in \mathbb{R}^6$, we have a compact quadratic minimization problem in $\mathbf{u}$:
 
 $$
-\mathop{\text{minimize}}_{\mathbf{u}\in \mathbb{R}^{6}} 
+\mathop{\text{minimize}}\_{\mathbf{u}\in \mathbb{R}^{6}} 
 \mathbf{u}^\top
 \mathbf{A}
-\mathbf{u}
-- 2
-\mathbf{u}^\top
+\mathbf{u} - 2 \mathbf{u}^{\top}
 \mathbf{b}
 $$
 
