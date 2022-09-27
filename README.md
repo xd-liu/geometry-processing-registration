@@ -381,8 +381,8 @@ rather than the energy term.
 The point-to-point (gradient descent) rigid matching problem solves:
 
 $$
-\mathop{\text{minimize}}_{\mathbf{R} \in SO(3),\mathbf{t} \in \mathbb{R}^3} 
-\sum_{i=1}^k \| \mathbf{R} \mathbf{x}_i + \mathbf{t} - \mathbf{p}_i\|^2
+\mathop{\text{minimize}}\_{\mathbf{R} \in SO(3),\mathbf{t} \in \mathbb{R}^3} 
+\sum_{i=1}^k \| \mathbf{R} \mathbf{x}\_i + \mathbf{t} - \mathbf{p}\_i\|^2
 $$
 
 This is a variant of what's known as a [Procrustes problem](https://en.wikipedia.org/wiki/Orthogonal_Procrustes_problem), named after a [mythical psychopath](https://en.wikipedia.org/wiki/Procrustes) who would kidnap people and force them to fit in his bed by stretching them or cutting off their legs. In our case, we are forcing $\mathbf{R}$ to be perfectly orthogonal (no "longer", no "shorter").
