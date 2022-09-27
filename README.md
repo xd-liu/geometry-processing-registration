@@ -141,8 +141,8 @@ _greater_ than the directed Hausdorff distance from this [point
 cloud](https://en.wikipedia.org/wiki/Point_cloud) $\mathbf{P}_X$ to $Y$:
 
 $$
-D_{\overrightarrow{H}}(X,Y) \ge  
-D_{\overrightarrow{H}}(\mathbf{P}_X,Y) = \max_{i=1}^k || \mathbf{p}_i - P_Y(\mathbf{p}_i)|| ,
+D\_{\overrightarrow{H}}(X,Y) \ge  
+D\_{\overrightarrow{H}}(\mathbf{P}\_X,Y) = \max\_{i=1}^k || \mathbf{p}\_i - P\_Y(\mathbf{p}\_i)|| ,
 $$
 
 
