@@ -572,8 +572,8 @@ $$
 The point-to-plane (Gauss-Newton) rigid matching problem solves:
 
 $$
-\mathop{\text{minimize}}_{\mathbf{R} \in SO(3),\mathbf{t} \in \mathbb{R}^3} 
-\sum_{i=1}^k || \mathbf{R} \mathbf{x}_i + \mathbf{t} - \mathbf{p}_i)\cdot \hat{\mathbf{n}}_i \hat{\mathbf{n}}_i ||^2,
+\mathop{\text{minimize}}\_{\mathbf{R} \in SO(3),\mathbf{t} \in \mathbb{R}^3} 
+\sum\_{i=1}^k || \mathbf{R} \mathbf{x}\_i + \mathbf{t} - \mathbf{p}\_i)\cdot \hat{\mathbf{n}}\_i \hat{\mathbf{n}}_i ||^2,
 $$
 
 where $\hat{\mathbf{n}}_i \in \mathbb{R}^3$ is the unit normal at the located closest point $\mathbf{p}_i$. Since $\hat{\mathbf{n}}$ is a unit vector the norm is only measuring the proceeding term $\mathbf{R} \mathbf{x}_i + \mathbf{t} - \mathbf{p}_i)\cdot \hat{\mathbf{n}}_i$, so we can reduce this problem to:
