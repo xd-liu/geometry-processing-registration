@@ -403,12 +403,13 @@ $$
 
 where $\mathbf{1} \in  \mathbb{R}^{k}$ is a vector ones and $\|\mathbf{X}\|_F^2$ computes the squared [Frobenius norm](https://en.wikipedia.org/wiki/Matrix_norm#Frobenius_norm) of the matrix $\mathbf{X}$ (i.e., the sum of all squared element values. In MATLAB syntax: `sum(sum(A.^2))`).  Setting the partial derivative with respect to $\mathbf{t}$ of this quadratic energy to zero finds the minimum:
 
+$$
 \begin{align*}
 0 
 &= \frac{\partial }{\partial \mathbf{t}} \left\|\mathbf{R} \mathbf{X}^{\top} + \mathbf{t} \mathbf{1}^{\top} - \mathbf{P}^{\top}\right\|^2_F \\
 &= \mathbf{1}^{\top} \mathbf{1} \mathbf{t} + \mathbf{R} \mathbf{X}^{\top} \mathbf{1} - \mathbf{P}^{\top} \mathbf{1},
 \end{align*}
-
+$$
 
 
 Rearranging terms above reveals that the optimal $\mathbf{t}$ is the vector aligning
