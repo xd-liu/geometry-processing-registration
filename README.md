@@ -702,7 +702,7 @@ Expanding all terms, moving the summations inside like terms, we can expose this
 
 $$
 \mathop{\text{minimize}}\_{\mathbf{u}\in \mathbb{R}^{6}} 
-\,\, \mathbf{u}^{\top}
+\\,\\, \mathbf{u}^{\top}
 \underbrace{
 \left(
   \sum\_{i=1}^k 
@@ -717,7 +717,10 @@ $$
 \underbrace{
 \left(
   \sum\_{i=1}^k 
-      \begin{bmatrix} (\mathbf{x}\_i \times \hat{\mathbf{n}}\_i) \\  \hat{\mathbf{n}}\_i \end{bmatrix}
+      \begin{bmatrix} 
+      (\mathbf{x}\_i \times \hat{\mathbf{n}}\_i) \\  
+      \hat{\mathbf{n}}\_i 
+      \end{bmatrix}
       \hat{\mathbf{n}}\_i^\top
       (\mathbf{p}\_i-\mathbf{x}\_i)
 \right)
