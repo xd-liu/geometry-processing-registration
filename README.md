@@ -281,10 +281,10 @@ $$
 $$
 
 
-where the plane that _best_ approximates $Y$ locally near $P_Y(\mathbf{z}_{0})$ is the
+where the plane that _best_ approximates $Y$ locally near $P\_Y(\mathbf{z}\_{0})$ is the
 [tangent plane](https://en.wikipedia.org/wiki/Tangent_space) defined by the
 [normal vector](https://en.wikipedia.org/wiki/Normal_(geometry)) $\mathbf{n}$ at
-$P_Y(\mathbf{z}_{0})$.
+$P\_Y(\mathbf{z}\_{0})$.
 
 
 Minimizing $E_{\overrightarrow{C}}$ iteratively using this linearization of
