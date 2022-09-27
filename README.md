@@ -38,8 +38,7 @@ complete scan of the surface $Y$ of some [rigid
 object](https://en.wikipedia.org/wiki/Rigid_body) and a new partial scan of
 that surface $X$.
 
-![Example input: a partial scan mesh surface $X$ is misaligned with the 
-mesh of the complete surface $Y$](images/max-inputs.jpg)
+![](images/max-inputs.jpg)
 
 These meshes will not have the same number of vertices or the even the same
 topology. We will first explore different ways to _measure_ how well aligned
