@@ -605,7 +605,7 @@ $$
 
 For a general, rotation axis $\hat{\mathbf{w}}$, we can write a generalized <a id=aa>_**axis-angle to matrix formula**_</a>:
 $$
-\mathbf{R}_{\hat{\mathbf{w}}}(\theta) = 
+\mathbf{R}\_{\hat{\mathbf{w}}}(\theta) = 
 \begin{bmatrix}
           1 & 0 & 0 \\
           0 & 1 & 0 \\
@@ -615,17 +615,17 @@ $$
 \sin \theta
 \underbrace{
 \begin{bmatrix}
-          0 & -w_3 & w_2 \\
-          w_3 & 0 & -w_1 \\
-          -w_2 & w_1 & 0
+          0 & -w\_3 & w\_2 \\
+          w\_3 & 0 & -w\_1 \\
+          -w\_2 & w\_1 & 0
 \end{bmatrix}
-}_{\mathbf{W}}
+}\_{\mathbf{W}}
 +
 (1-\cos \theta)
 \begin{bmatrix}
-          0 & -w_3 & w_2 \\
-          w_3 & 0 & -w_1 \\
-          -w_2 & w_1 & 0
+          0 & -w\_3 & w\_2 \\
+          w\_3 & 0 & -w\_1 \\
+          -w\_2 & w\_1 & 0
 \end{bmatrix}^2
 $$
 
