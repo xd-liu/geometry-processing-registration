@@ -218,8 +218,7 @@ Suppose $Y$ was not a surface, but just a single point $Y = \{\mathbf{y}\}$. In 
 case, $\mathbf{f}(\mathbf{z}) = \mathbf{z} - \mathbf{y}$ is clearly linear in $\mathbf{z}$.
 
 Similarly, suppose $Y$ was an [infinite
-plane](https://en.wikipedia.org/wiki/Plane_(geometry)) $Y = \{\mathbf{y} | (\mathbf{y}-\mathbf{p})\cdot \mathbf{n} =
-0\}$ defined by some point $\mathbf{p}$ on the plane and the plane's unit normal vector
+plane](https://en.wikipedia.org/wiki/Plane_(geometry)) $Y = \{\mathbf{y} | (\mathbf{y}-\mathbf{p})\cdot \mathbf{n} =0\}$ defined by some point $\mathbf{p}$ on the plane and the plane's unit normal vector
 $\mathbf{n}$. Then $\mathbf{f}(\mathbf{z}) = ((\mathbf{z}-\mathbf{p})\cdot \mathbf{n})\mathbf{n})$ is also linear in $\mathbf{z}$.
 
 But in general, if $Y$ is an interesting surface $\mathbf{f}(\mathbf{z})$ will be non-linear; it
