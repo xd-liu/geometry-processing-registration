@@ -451,6 +451,7 @@ $\overline{\mathbf{x}}_i = (\mathbf{x}_i - \overline{\mathbf{x}})$ (and analagou
 
 Now we have the canonical form of the [orthogonal procrustes problem](https://en.wikipedia.org/wiki/Orthogonal_Procrustes_problem). To find the optimal rotation matrix $\mathbf{R}^*$, using the [associativity property](https://en.wikipedia.org/wiki/Associative_property) of the Frobenius norm, we will massage the terms in the _minimization_ until we have a _maximization_ problem involving the [Frobenius inner-product](https://en.wikipedia.org/wiki/Frobenius_inner_product) of the unknown rotation $\mathbf{R}$ and [covariance matrix](https://en.wikipedia.org/wiki/Covariance_matrix) of $\mathbf{X}$ and $\mathbf{P}$:
 
+
 $$
 \begin{align*}
 \mathbf{R}^* 
@@ -466,6 +467,7 @@ $$
   \overline{\mathbf{P}}^{\top} \right>_F \\
 \end{align*}
 $$
+
 
 where $\left<\mathbf{A}, \mathbf{B} \right>_F$ is the [Frobenius inner product](https://en.wikipedia.org/wiki/Frobenius_inner_product) of  $\mathbf{A}$ and $\mathbf{B}$ (i.e., the sum of all per-element products. In MATLAB syntax: `sum(sum(A.*B))`).  This can be further reduced:
 
