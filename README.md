@@ -116,10 +116,7 @@ this as taking the worst of the best: we
 let each point $\mathbf{x}$ on $X$ declare its shortest distance to $Y$ and then keep
 the longest of those.
 
-![The directed Hausdorff distance between from surface $X$ (light orange) to
-another surface $Y$ (light blue) is determined by the point on $X$ (orange)
-whose closest point on $Y$ (blue) is the farthest
-away.](images/max-point-mesh-farthest.jpg)
+![](images/max-point-mesh-farthest.jpg)
 
 It is easy to verify that $D_{\overrightarrow{H}}$ will only equal zero if all
 points on $X$ also lie exactly on $Y$. 
