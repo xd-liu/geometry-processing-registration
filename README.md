@@ -396,8 +396,8 @@ setting all derivatives with respect to unknowns in $\mathbf{t}$ to zero:
 $$
 \begin{align*}
 \mathbf{t}^*
-&= \mathop{\text{argmin}}_{\mathbf{t}} \sum_{i=1}^k \| \mathbf{R} \mathbf{x}_i + \mathbf{t} - \mathbf{p}_i\| ^{2}  \\
-&= \mathop{\text{argmin}}_\mathbf{t} \left\|\mathbf{R} \mathbf{X}^{\top} + \mathbf{t} \mathbf{1}^{\top} - \mathbf{P}^{\top}\right\|^2_F,
+&= \mathop{\text{argmin}}\_{\mathbf{t}} \sum\_{i=1}^k \| \mathbf{R} \mathbf{x}\_i + \mathbf{t} - \mathbf{p}\_i\| ^{2}  \\
+&= \mathop{\text{argmin}}\_\mathbf{t} \left\|\mathbf{R} \mathbf{X}^{\top} + \mathbf{t} \mathbf{1}^{\top} - \mathbf{P}^{\top}\right\|^2\_F,
 \end{align*}
 $$
 
